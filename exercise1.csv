@@ -1,0 +1,15 @@
+,model,Score (RMSE),Hyperparams used,Features dropped,New features created,Runtime trainining + inference (seconds),Hardware used (GPU/CPU/TPU),Explainability (top 3 features)
+0,XGboost,40.819004930021286,"XGBRegressor(base_score=None, booster=None, callbacks=None,
+             colsample_bylevel=None, colsample_bynode=None,
+             colsample_bytree=None, device=None, early_stopping_rounds=None,
+             enable_categorical=False, eval_metric='rmse', feature_types=None,
+             gamma=None, grow_policy=None, importance_type=None,
+             interaction_constraints=None, learning_rate=0.1, max_bin=None,
+             max_cat_threshold=None, max_cat_to_onehot=None,
+             max_delta_step=None, max_depth=7, max_leaves=None,
+             min_child_weight=None, missing=nan, monotone_constraints=None,
+             multi_strategy=None, n_estimators=None, n_jobs=None,
+             num_parallel_tree=None, random_state=42, ...)","['atemp', 'sunlight']","['rent_hour', 'day_of_week', 'month', 'year']",['698.4668385982513'],GPU,"['year-0.1396', 'workingday-0.1472', 'rent_hour-0.2777']"
+1,Random Forest,47.15455088752998,"RandomForestRegressor(max_depth=20, max_features='auto', n_estimators=300,
+                      random_state=42)","['atemp', 'sunlight']","['rent_hour', 'day_of_week', 'month', 'year']",['698.4668385982513'],GPU,"['temp-0.0822', 'pollution-0.1846', 'rent_hour-0.4561']"
+2,Linear Regression,118.4649698443016,no hyperparameters,"['atemp', 'sunlight']","['rent_hour', 'day_of_week', 'month', 'year']",['698.4668385982513'],GPU,"[""['traffic', 'year', 'weather']""]"
